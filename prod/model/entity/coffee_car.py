@@ -1,5 +1,4 @@
 from prod.model.entity import *
-from util import *
 
 
 class CoffeeCar:
@@ -23,6 +22,7 @@ class CoffeeCar:
         if isinstance(coffee_box, CoffeeBox):
             self._ls.append(coffee_box)
 
+
     def __getitem__(self, index):
         if isinstance(index, int) and 0 <= index < len(self):
             return self._ls[index]
@@ -45,12 +45,9 @@ class CoffeeCar:
 
     def __str__(self):
         if not self._ls:
-            return f"Coffee car is empty! You can load {self._capacity} coffee boxes."
+            return f"Coffee car is empty! You can load {self._capacity} kg of coffee."
         else:
             msg = "Coffee list:\n"
             for coffee_box in self._ls:
                 msg += str(coffee_box) + "\n"
-            msg += f"You can load {self._capacity - len(self)} more coffee boxes."
             return msg
-
-

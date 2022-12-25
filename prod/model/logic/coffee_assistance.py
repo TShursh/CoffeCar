@@ -1,5 +1,4 @@
 from prod.model.entity import *
-from util import *
 
 
 class CoffeeAssistance:
@@ -11,9 +10,22 @@ class CoffeeAssistance:
 
         total = 0
 
-        for cb in coffee_list:
+        for cb in range(len(coffee_list)):
             if isinstance(coffee_list, CoffeeCar):
-                total += cb
+                total += coffee_list[cb].price_box
+
+        return total
+
+    @staticmethod
+    def calculate_total_weight(coffee_list):
+        if not isinstance(coffee_list, CoffeeCar):
+            return -1
+
+        total = 0
+
+        for cb in range(len(coffee_list)):
+            if isinstance(coffee_list, CoffeeCar):
+                total += coffee_list[cb].weight
 
         return total
 

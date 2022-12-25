@@ -1,5 +1,5 @@
 class CoffeeBox:
-    def __init__(self, country_of_origin, variety, weight, price_for_1kg=0):
+    def __init__(self, country_of_origin, variety, weight, price_for_1kg):
         self._country_of_origin = country_of_origin
         self._variety = variety
         self._weight = weight
@@ -66,8 +66,8 @@ class CoffeeBox:
         del self._price_for_1kg
 
     def __str__(self):
-        return (f"Coffee box: country of origin - {self._country_of_origin}; "
+        return (f"Coffee box: country - {self._country_of_origin}; "
                 f"variety - {self._variety}; "
-                f"weight - {self._weight}; "
-                f"price for 1kg - {self._price_for_1kg}")
+                f"weight = {self._weight}; "
+                f"price for 1kg = {self._price_for_1kg}")
 

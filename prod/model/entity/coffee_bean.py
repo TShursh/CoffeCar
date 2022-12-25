@@ -2,7 +2,7 @@ from prod.model.entity import *
 
 
 class CoffeeBean(CoffeeBox):
-    def __init__(self, country_of_origin, variety, degree_of_roast, grain_size, weight, price_for_1kg=0):
+    def __init__(self, country_of_origin, variety, degree_of_roast, grain_size, weight, price_for_1kg):
         super().__init__(country_of_origin, variety, weight, price_for_1kg)
         self._degree_of_roast = degree_of_roast
         self._grain_size = grain_size
@@ -32,11 +32,11 @@ class CoffeeBean(CoffeeBox):
         del self._grain_size
 
     def __str__(self):
-        return (f"Coffee bean box: country of origin - {self._country_of_origin}; "
+        return (f"Bean box: country - {self._country_of_origin}; "
                 f"variety - {self._variety}; "
                 f"degree of roast - {self._degree_of_roast}; "
                 f"grain size - {self._grain_size}; "
-                f"weight - {self._weight}; "
-                f"price for 1 kg - {self._price_for_1kg}.")
+                f"weight = {self._weight}; "
+                f"price for 1 kg = {self._price_for_1kg}.")
 
 

@@ -2,7 +2,7 @@ import random
 from util.converter import *
 
 
-class InstantCoffeeBoxCreator:
+class GroundCoffeeBoxCreator:
 
     @staticmethod
     def create():
@@ -11,7 +11,11 @@ class InstantCoffeeBoxCreator:
 
         VARIETY = ("Arabica", "Canephora", "Liberica", "Excelsa")
 
-        MODE_OF_PRODUCTION = ("powder", "granular", "sublimated", "ground in soluble")
+        DEGREE_OF_ROAST = ("light", "medium", "dark")
+
+        GRAIN_SIZE = ("very large", "large", "medium", "small", "very small")
+
+        DEGREE_OF_GRINDING = ("coarse", "medium", "espresso", "powder")
 
         MIN_WEIGHT = 1
         MAX_WEIGHT = 10
@@ -21,10 +25,13 @@ class InstantCoffeeBoxCreator:
 
         country_of_origin = random.choice(COUNTRY_OF_ORIGIN)
         variety = random.choice(VARIETY)
+        degree_of_roast = random.choice(DEGREE_OF_ROAST)
+        grain_size = random.choice(GRAIN_SIZE)
+        degree_of_grinding = random.choice(DEGREE_OF_GRINDING)
         weight = random.randint(MIN_WEIGHT, MAX_WEIGHT)
-        mode_of_production = random.choice(MODE_OF_PRODUCTION)
         price_for_1kg = random.randint(MIN_PRICE_FOR_1KG, MAX_PRICE_FOR_1KG)
-        instant_coffee_box = InstantCoffee(country_of_origin, variety, mode_of_production, weight, price_for_1kg)
 
-        return instant_coffee_box
+        ground_coffee_box = GroundCoffee(country_of_origin, variety, degree_of_roast, grain_size, degree_of_grinding, weight, price_for_1kg)
+
+        return ground_coffee_box
 
