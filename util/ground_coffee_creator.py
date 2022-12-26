@@ -31,7 +31,7 @@ class GroundCoffeeBoxCreator:
         weight = random.randint(MIN_WEIGHT, MAX_WEIGHT)
         price_for_1kg = random.randint(MIN_PRICE_FOR_1KG, MAX_PRICE_FOR_1KG)
 
-        ground_coffee_box = GroundCoffee(country_of_origin, variety, degree_of_roast, grain_size, degree_of_grinding, weight, price_for_1kg)
+        ground_coffee_box = GroundCoffee(country_of_origin, variety, degree_of_roast, grain_size, degree_of_grinding,
+                                         weight, price_for_1kg)
 
         return ground_coffee_box
-

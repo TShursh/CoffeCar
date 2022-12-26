@@ -38,5 +38,3 @@ class CoffeeBean(CoffeeBox):
                 f"grain size - {self._grain_size}; "
                 f"weight = {self._weight}; "
                 f"price for 1 kg = {self._price_for_1kg}.")
-
-

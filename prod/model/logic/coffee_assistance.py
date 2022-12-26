@@ -28,7 +28,3 @@ class CoffeeAssistance:
                 total += coffee_list[cb].weight
 
         return total
-
-
-
-

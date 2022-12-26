@@ -24,5 +24,3 @@ class InstantCoffee(CoffeeBox):
                 f"mode of production - {self._mode_of_production}; "
                 f"weight = {self._weight}; "
                 f"price for 1 kg = {self._price_for_1kg}.")
-
-

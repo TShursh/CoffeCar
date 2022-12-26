@@ -1,5 +1,7 @@
-import random
+# В теории понимаю, что можно было сделать один родительский класс CoffeeBoxCreator,
+# а от него три штуки наследуемых, но на практике не осилила =)
 
+import random
 from util.converter import *
 
 

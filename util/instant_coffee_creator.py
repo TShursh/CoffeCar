@@ -27,4 +27,3 @@ class InstantCoffeeBoxCreator:
         instant_coffee_box = InstantCoffee(country_of_origin, variety, mode_of_production, weight, price_for_1kg)
 
         return instant_coffee_box
-

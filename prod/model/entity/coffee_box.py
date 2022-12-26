@@ -70,4 +70,3 @@ class CoffeeBox:
                 f"variety - {self._variety}; "
                 f"weight = {self._weight}; "
                 f"price for 1kg = {self._price_for_1kg}")
-

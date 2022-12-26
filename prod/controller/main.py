@@ -5,7 +5,7 @@ from util import *
 
 
 def main():
-    capacity = int(input("Input capacity car: "))
+    capacity = int(input("Input capacity car in kg: "))
 
     coffee_ls = CoffeeCar(capacity)
 

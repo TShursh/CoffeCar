@@ -22,7 +22,6 @@ class CoffeeCar:
         if isinstance(coffee_box, CoffeeBox):
             self._ls.append(coffee_box)
 
-
     def __getitem__(self, index):
         if isinstance(index, int) and 0 <= index < len(self):
             return self._ls[index]
