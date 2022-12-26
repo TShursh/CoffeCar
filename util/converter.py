@@ -5,9 +5,9 @@ class Converter:
 
     @staticmethod
     def convert_to_string(ls):
-        msg = "List of coffee box: \n"
+        msg = ""
 
-        if not isinstance(ls, (list, tuple)):
+        if not isinstance(ls, (list, tuple)) or len(ls) == 0:
             return "List is empty."
 
         for coffee_box in ls:

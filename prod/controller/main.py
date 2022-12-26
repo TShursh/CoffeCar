@@ -11,7 +11,7 @@ def main():
 
     while CoffeeAssistance.calculate_total_weight(coffee_ls) <= capacity - 10:
         # тут можно было обратиться к константной переменной MAX_WEIGHT из CoffeeBeanCreator, но я не догадалась как,
-        # поэтому хардкод -10, чтобы не было перегруза))
+        # поэтому хардкод -10, чтобы не было перегруза машины))
         ls_creator = [InstantCoffeeBoxCreator.create(), CoffeeBeanBoxCreator.create(), GroundCoffeeBoxCreator.create()]
         coffee_ls.add(random.choice(ls_creator))
 
@@ -21,7 +21,8 @@ def main():
     print(f"The total price of coffee is {CoffeeAssistance.calculate_total_price(coffee_ls)} $")
     print(f"The total weight of coffee is {CoffeeAssistance.calculate_total_weight(coffee_ls)} kg")
 
-    print(Finder.find(coffee_ls))
+    find_ls = Finder.find(coffee_ls)
+    print(f'Found the following coffee boxes variety "Arabica":\n{Converter.convert_to_string(find_ls)}')
 
 
 if __name__ == "__main__":
